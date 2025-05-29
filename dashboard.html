@@ -1,0 +1,128 @@
+[style.css]
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #00529B;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 20px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #eee;
+  margin-top: 20px;
+}
+
+---
+
+[cours.html]
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogue des cours</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Catalogue des Cours</h1>
+  </header>
+  <section>
+    <ul>
+      <li>MEAL Niveau 6 - Durée : 6 mois - Certificat délivré</li>
+      <li>Gestion de projet humanitaire - 4 mois - Formation hybride</li>
+      <li>Protection et inclusion - 3 mois - En ligne</li>
+    </ul>
+  </section>
+  <footer>
+    <p>&copy; 2025 Institut de Formation</p>
+  </footer>
+</body>
+</html>
+
+---
+
+[login.html]
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion Étudiant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Connexion Étudiant</h1>
+  </header>
+  <section>
+    <form action="#" method="post">
+      <label for="email">Email :</label><br>
+      <input type="email" id="email" name="email"><br>
+      <label for="password">Mot de passe :</label><br>
+      <input type="password" id="password" name="password"><br><br>
+      <button type="submit">Connexion</button>
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2025 Institut de Formation</p>
+  </footer>
+</body>
+</html>
+
+---
+
+[dashboard.html]
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de bord Étudiant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Tableau de bord</h1>
+  </header>
+  <section>
+    <h2>Bienvenue, [Nom de l'étudiant]</h2>
+    <p>Progrès : 45%</p>
+    <ul>
+      <li>Cours suivis</li>
+      <li>Quiz disponibles</li>
+      <li>Certificats téléchargeables</li>
+    </ul>
+  </section>
+  <footer>
+    <p>&copy; 2025 Institut de Formation</p>
+  </footer>
+</body>
+</html>
