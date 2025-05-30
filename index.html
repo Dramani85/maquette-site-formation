@@ -8,48 +8,67 @@
 </head>
 <body>
   <header>
-    <div class="logo-container">
-      <img src="images/logo.png" alt="Logo Campus Humanitaire" class="logo" />
+    <div class="container">
+      <img src="logo.png" alt="Logo Campus Humanitaire" class="logo" />
       <h1>Campus Humanitaire</h1>
+      <nav>
+        <div class="burger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul id="menu">
+          <li><a href="index.html">Accueil</a></li>
+          <li class="dropdown">
+            <a href="#">Formations</a>
+            <ul class="submenu">
+              <li><a href="filiere-meal.html">Filière MEAL+</a></li>
+              <li><a href="filiere-projets.html">Filière Projets</a></li>
+              <!-- Ajouter ici d'autres filières plus tard -->
+            </ul>
+          </li>
+          <li><a href="#">Ressources</a></li>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <input type="checkbox" id="menu-toggle">
-      <label for="menu-toggle" class="burger-menu">☰</label>
-      <ul class="menu">
-        <li><a href="index.html">Accueil</a></li>
-        <li class="has-submenu">
-          <a href="#">Formations ▾</a>
-          <ul class="submenu">
-            <li><a href="filiere-meal.html">Filière F-MEAL+</a></li>
-            <li><a href="filiere-gp.html">Filière Gestion de Projet</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Ressources</a></li>
-        <li><a href="#">Connexion</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero-content">
-        <h2>Former les bâtisseurs de la qualité humanitaire et développementale</h2>
-        <p>Des formations certifiantes, adaptées aux réalités de terrain, pour les acteurs de demain.</p>
-        <a href="filiere-meal.html" class="btn">Découvrir la filière F-MEAL+</a>
-      </div>
+      <h2>Former les bâtisseurs de la qualité humanitaire et développementale</h2>
+      <p>Des formations certifiantes, professionnalisantes et adaptées aux réalités du terrain humanitaire.</p>
     </section>
 
     <section class="intro">
-      <h2>Bienvenue au Campus Humanitaire</h2>
-      <p>
-        Le Campus Humanitaire est un centre de formation professionnelle dédié à l’aide humanitaire et au développement.
-        Nos filières préparent des professionnels engagés, compétents et reconnus sur le terrain.
-      </p>
+      <h3>Notre mission</h3>
+      <p>Répondre aux besoins critiques des ONG en renforçant les compétences des professionnels du suivi-évaluation, de la gestion de projets et de la redevabilité.</p>
+    </section>
+
+    <section class="highlights">
+      <div class="card">
+        <h4>Filière MEAL+</h4>
+        <p>Une certification en 6 mois pour devenir Coordinateur MEAL, Analyste de données, Chargé AAP ou GPH.</p>
+        <a href="filiere-meal.html" class="btn">Découvrir</a>
+      </div>
+      <div class="card">
+        <h4>Filière Projets</h4>
+        <p>Maîtrisez les compétences en gestion de projets humanitaires, sécurité alimentaire, WASH, logistique.</p>
+        <a href="filiere-projets.html" class="btn">Explorer</a>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Campus Humanitaire | Tous droits réservés</p>
+    <p>&copy; 2025 Campus Humanitaire – Tous droits réservés</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
