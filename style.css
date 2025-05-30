@@ -13,10 +13,10 @@ body {
   line-height: 1.6;
 }
 
-/* TOP BANNER (LOGO ZONE) */
+/* TOP BANNER (zone grise claire + nom orange) */
 .top-banner {
-  background-color: #ffa500; /* orange léger */
-  padding: 10px 20px;
+  background-color: #e0e0e0;
+  padding: 12px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +34,7 @@ body {
 
 .logo-container h1 {
   font-size: 1.8rem;
-  color: #fff;
+  color: #ffa500; /* orange */
 }
 
 /* HEADER MENU */
@@ -160,7 +160,7 @@ header {
   }
 }
 
-/* BANNIERE */
+/* BANNIÈRE */
 .banner {
   background-image: url('images/humanitarian-banner.jpg');
   background-size: cover;
