@@ -1,92 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Institut de Formation - Maquette</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-    header {
-      background-color: #00529B;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 15px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 20px;
-      background-color: white;
-      margin: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #eee;
-      margin-top: 20px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plateforme de Formation - Accueil</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Institut de Formation</h1>
+    <h1>Plateforme de Formation</h1>
     <nav>
-      <a href="#accueil">Accueil</a>
-      <a href="#catalogue">Formations</a>
-      <a href="#etudiants">Espace étudiant</a>
-      <a href="#enseignants">Espace enseignant</a>
-      <a href="#paiement">Paiement</a>
-      <a href="#contact">Contact</a>
+      <ul>
+        <li><a href="index.html">🏠 Accueil</a></li>
+        <li><a href="cours.html">📚 Formations</a></li>
+        <li><a href="login.html">🔐 Connexion</a></li>
+        <li><a href="dashboard.html">🧑‍🎓 Tableau de bord</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section id="accueil">
-    <h2>Bienvenue</h2>
-    <p>Plateforme de formation professionnelle continue. Inspirez-vous de Bioforce.</p>
-  </section>
+  <main>
+    <section>
+      <h2>Bienvenue sur la plateforme</h2>
+      <p>Suivez des formations professionnelles en ligne, à votre rythme.</p>
+    </section>
 
-  <section id="catalogue">
-    <h2>Catalogue de Formations</h2>
-    <ul>
-      <li>MEAL Niveau 6</li>
-      <li>Gestion de projet humanitaire</li>
-      <li>Protection et inclusion</li>
-    </ul>
-  </section>
+    <section>
+      <h3>Nos formations</h3>
+      <p>Consultez notre <a href="cours.html">catalogue complet</a>.</p>
+    </section>
 
-  <section id="etudiants">
-    <h2>Espace Étudiant</h2>
-    <p>Connexion, tableau de bord, progression, quiz, certificats PDF.</p>
-  </section>
-
-  <section id="enseignants">
-    <h2>Espace Enseignant</h2>
-    <p>Création de modules, gestion des notes et contrôle des quiz.</p>
-  </section>
-
-  <section id="paiement">
-    <h2>Paiement simulé</h2>
-    <p>Inscription et paiement automatisés simulés via une interface simple.</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Formulaire de contact. Accès contrôlé à la plateforme.</p>
-  </section>
+    <section>
+      <h3>Déjà inscrit ?</h3>
+      <p><a href="login.html">Connectez-vous ici</a> pour accéder à votre tableau de bord.</p>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Institut de Formation. Tous droits réservés.</p>
+    <p>&copy; 2025 Ma plateforme de formation</p>
   </footer>
 </body>
 </html>
