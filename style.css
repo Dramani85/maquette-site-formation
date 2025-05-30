@@ -1,6 +1,6 @@
-/* style.css - version responsive avec menu burger */
+/* style.css – Campus Humanitaire (responsive + menu déroulant horizontal) */
 
-/* Réinitialisation de base */
+/* --- Reset & Base --- */
 * {
   margin: 0;
   padding: 0;
@@ -8,133 +8,175 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
   background-color: #f4f4f4;
   color: #333;
-  line-height: 1.6;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- Header --- */
 header {
-  background-color: #003366;
+  background-color: #001F3F;
   color: white;
   padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   position: relative;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  color: orange;
-  font-weight: bold;
+  gap: 10px;
 }
 
 .logo img {
-  height: 40px;
-  margin-right: 0.5rem;
+  height: 50px;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  color: orange;
+  font-weight: 600;
 }
 
 nav {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin-top: 1rem;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-nav ul li {
+  gap: 1.2rem;
   position: relative;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.5rem;
-  transition: background 0.3s;
+nav li {
+  position: relative;
 }
 
-nav a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+nav > ul > li > a {
+  color: white;
+  padding: 0.5rem 0.8rem;
+  display: block;
+}
+
+nav li:hover > a {
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
 }
 
 /* Sous-menu */
-nav ul li ul {
+nav li ul {
   display: none;
   position: absolute;
-  background-color: #003366;
   top: 100%;
   left: 0;
+  background-color: #003366;
   min-width: 200px;
+  border-radius: 5px;
   z-index: 999;
   flex-direction: column;
-  padding: 0.5rem 0;
 }
 
-nav ul li:hover ul {
+nav li:hover ul {
   display: flex;
 }
 
-nav ul li ul li {
-  width: 100%;
+nav li ul li a {
+  color: white;
+  padding: 0.6rem 1rem;
+  display: block;
 }
 
-/* Section principale */
-main {
-  padding: 2rem;
+nav li ul li a:hover {
+  background-color: #005599;
 }
 
-/* Burger Menu */
+/* --- Burger Menu --- */
 .burger {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  position: absolute;
-  right: 2rem;
-  top: 1.5rem;
+  gap: 5px;
 }
 
 .burger div {
   width: 25px;
   height: 3px;
   background-color: white;
-  margin: 4px;
+  border-radius: 2px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
-    display: none;
     width: 100%;
-    background-color: #003366;
-    padding: 1rem;
+    background-color: #001F3F;
+    display: none;
+    margin-top: 1rem;
   }
 
-  nav ul.active {
+  nav.active ul {
     display: flex;
   }
 
   .burger {
     display: flex;
   }
+
+  nav li ul {
+    position: static;
+  }
+
+  nav li:hover ul {
+    display: none;
+  }
+
+  nav li ul {
+    display: none;
+  }
+
+  nav li.active ul {
+    display: flex;
+  }
 }
 
-/* Pied de page */
+/* --- Main Content --- */
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/* --- Footer --- */
 footer {
-  background-color: #003366;
+  background-color: #001F3F;
   color: white;
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+}
+
+/* --- Utilitaires --- */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
 }
