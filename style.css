@@ -1,182 +1,184 @@
-/* style.css – Campus Humanitaire (responsive + menu déroulant horizontal) */
+/* style.css – Version responsive et structure révisée */
 
-/* --- Reset & Base --- */
+/* RESET DE BASE */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   background-color: #f4f4f4;
   color: #333;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* --- Header --- */
+/* EN-TÊTE */
 header {
-  background-color: #001F3F;
-  color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  background-color: #0a1a2f;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
   position: relative;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  max-width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
 }
 
-.logo img {
-  height: 50px;
-}
-
-.logo h1 {
-  font-size: 1.8rem;
+h1 {
   color: orange;
-  font-weight: 600;
+  font-size: 2.2rem;
 }
 
+/* NAVIGATION */
 nav {
+  background-color: #0f2b4d;
   display: flex;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  position: relative;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
-  gap: 1.2rem;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav ul li {
   position: relative;
 }
 
-nav li {
-  position: relative;
-}
-
-nav > ul > li > a {
-  color: white;
-  padding: 0.5rem 0.8rem;
+nav ul li a {
   display: block;
+  padding: 15px 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s;
 }
 
-nav li:hover > a {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
+nav ul li a:hover {
+  background-color: #1e3d66;
 }
 
-/* Sous-menu */
-nav li ul {
+/* MENU DÉROULANT */
+nav ul li ul {
   display: none;
   position: absolute;
+  background-color: #1e3d66;
   top: 100%;
   left: 0;
-  background-color: #003366;
-  min-width: 200px;
-  border-radius: 5px;
-  z-index: 999;
+  min-width: 220px;
+  z-index: 1000;
   flex-direction: column;
 }
 
-nav li:hover ul {
+nav ul li:hover > ul {
   display: flex;
 }
 
-nav li ul li a {
-  color: white;
-  padding: 0.6rem 1rem;
-  display: block;
+nav ul li ul li {
+  width: 100%;
 }
 
-nav li ul li a:hover {
-  background-color: #005599;
-}
-
-/* --- Burger Menu --- */
+/* MENU BURGER */
 .burger {
   display: none;
-  flex-direction: column;
   cursor: pointer;
-  gap: 5px;
+  flex-direction: column;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  z-index: 1001;
 }
 
-.burger div {
+.burger span {
+  height: 4px;
   width: 25px;
-  height: 3px;
-  background-color: white;
+  background: white;
+  margin-bottom: 5px;
   border-radius: 2px;
 }
 
+/* MENU OUVERT EN MOBILE */
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column;
-    width: 100%;
-    background-color: #001F3F;
     display: none;
-    margin-top: 1rem;
+    width: 100%;
+    flex-direction: column;
+    background-color: #0f2b4d;
   }
 
-  nav.active ul {
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li ul {
+    position: static;
+  }
+
+  nav ul li:hover > ul {
+    display: none;
+  }
+
+  nav ul li:focus-within > ul {
     display: flex;
   }
 
   .burger {
     display: flex;
   }
-
-  nav li ul {
-    position: static;
-  }
-
-  nav li:hover ul {
-    display: none;
-  }
-
-  nav li ul {
-    display: none;
-  }
-
-  nav li.active ul {
-    display: flex;
-  }
 }
 
-/* --- Main Content --- */
+/* CONTENU PRINCIPAL */
 main {
-  padding: 2rem;
+  padding: 30px 15px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 section {
-  margin-bottom: 2rem;
+  margin-bottom: 40px;
 }
 
-/* --- Footer --- */
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #0f2b4d;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* PIED DE PAGE */
 footer {
-  background-color: #001F3F;
-  color: white;
+  background-color: #0a1a2f;
+  color: #fff;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: 15px 10px;
+  font-size: 0.9rem;
 }
 
-/* --- Utilitaires --- */
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 1rem;
+/* RESPONSIVE */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  p {
+    font-size: 0.95rem;
+  }
 }
