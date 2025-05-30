@@ -1,51 +1,72 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Campus Humanitaire</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="logo.png" type="image/png">
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png">
 </head>
+
 <body>
   <header>
-    <div class="container">
-      <img src="logo.png" alt="Logo Campus Humanitaire" class="logo" />
-      <h1 class="site-title">Campus Humanitaire</h1>
-      <nav>
-        <div class="burger" id="burger">&#9776;</div>
-        <ul id="nav-links">
-          <li><a href="index.html" class="active">Accueil</a></li>
-          <li><a href="formations.html">Formations</a></li>
-          <li><a href="filiere.html">Filière F-MEAL+</a></li>
-          <li><a href="ressources.html">Ressources</a></li>
-          <li><a href="connexion.html">Connexion</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Logo Campus Humanitaire">
+        <span class="site-title">Campus Humanitaire</span>
+      </div>
+      <div class="burger" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#">Accueil</a></li>
+        <li><a href="filiere.html">Filière F-MEAL+</a></li>
+        <li><a href="#formations">Formations</a></li>
+        <li><a href="#ressources">Ressources</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
     <section class="hero">
-      <h2>Former les bâtisseurs de la qualité humanitaire et développementale</h2>
-      <p>Rejoignez une communauté engagée pour un impact durable.</p>
-      <a href="filiere.html" class="btn">Découvrir la Filière F-MEAL+</a>
+      <div class="hero-content">
+        <h1>Former les bâtisseurs de la qualité humanitaire et développementale</h1>
+        <p>Certifications de niveau 6 – métiers MEAL, projet, données et plus encore.</p>
+        <a href="filiere.html" class="btn">Explorer la filière F-MEAL+</a>
+      </div>
     </section>
 
-    <section class="presentation">
-      <h3>Pourquoi choisir le Campus Humanitaire ?</h3>
-      <ul>
-        <li>Programmes intensifs alignés sur les standards internationaux (CHS, SPHERE...)</li>
-        <li>Formations professionnalisantes de 6 mois</li>
-        <li>Encadrement par des experts de terrain</li>
-        <li>Accès aux débouchés humanitaires et développement</li>
-      </ul>
+    <section class="features">
+      <div class="feature">
+        <h2>Des formations adaptées aux réalités humanitaires</h2>
+        <p>Conçues avec des professionnels de terrain.</p>
+      </div>
+      <div class="feature">
+        <h2>Certification reconnue</h2>
+        <p>Niveau 6 européen avec partenaires ONG et experts internationaux.</p>
+      </div>
+      <div class="feature">
+        <h2>100% professionnalisant</h2>
+        <p>Cas pratiques, coaching, mise en situation réelle.</p>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Campus Humanitaire – Tous droits réservés</p>
+    <p>&copy; 2025 Campus Humanitaire. Tous droits réservés.</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('active');
+    }
+  </script>
 </body>
+
 </html>
+
