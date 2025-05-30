@@ -1,87 +1,67 @@
-/* Réinitialisation */
-* {
+/* === En-tête avec logo et titre central === */
+.site-header {
+  background-color: #002b4f; /* Bleu foncé */
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.site-logo {
+  width: 60px;
+  height: auto;
+}
+
+.site-title {
+  color: #f0650e; /* Orange élégant */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2em;
+  font-weight: 600;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
-/* Corps */
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f6f8;
-  color: #333;
-  padding: 0 20px;
-}
-
-/* En-tête */
-header {
-  background-color: #004080;
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-
-header h1 {
-  margin-bottom: 10px;
-  font-size: 24px;
-}
-
-/* Barre de navigation */
-nav ul {
+/* === Navigation simple === */
+.main-nav ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  padding-left: 0;
+  justify-content: center;
+  background-color: #003c6c;
+  margin: 0;
+  padding: 10px 0;
 }
 
-nav ul li {
-  margin-right: 10px;
+.main-nav li {
+  margin: 0 15px;
 }
 
-nav ul li a {
+.main-nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  padding: 8px 12px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
-  background-color: #0066cc;
+.main-nav a:hover {
+  text-decoration: underline;
 }
 
-/* Contenu principal */
+/* === Contenu principal === */
 main {
-  background: white;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-/* Pied de page */
-footer {
-  margin-top: 40px;
+  padding: 40px 20px;
   text-align: center;
-  font-size: 14px;
-  color: #666;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  nav ul li a {
-    display: block;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.1);
-  }
+/* === Pied de page === */
+.site-footer {
+  background-color: #002b4f;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
 }
-
