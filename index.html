@@ -1,63 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Humanitaire</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Humanitaire</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="burger" id="burger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="logo-container">
-                <img src="logo.png" alt="Campus Humanitaire" class="logo">
-                <span class="site-title">Campus Humanitaire</span>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle">Formations</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="filiere-meal.html">Filière MEAL+</a></li>
-                        <li><a href="filiere-projets.html">Filière Projets</a></li>
-                        <li><a href="filiere-fsl.html">Filière FSL</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Ressources</a></li>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="logo.png" alt="Logo Campus Humanitaire" class="logo" />
+      </div>
+      <div class="burger" id="burger">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li class="has-submenu">
+          <a href="#">Formations</a>
+          <ul class="submenu">
+            <li><a href="filiere-meal.html">Filière MEAL+</a></li>
+            <li><a href="filiere-projets.html">Filière Gestion de Projet</a></li>
+            <li><a href="filiere-fsl.html">Filière FSL</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Ressources</a></li>
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section class="hero">
-            <h1>Former les bâtisseurs de la qualité humanitaire et développementale</h1>
-            <p>Des formations professionnalisantes pour les acteurs du changement</p>
-        </section>
-    </main>
+  <section class="welcome-banner">
+    <div class="welcome-content">
+      <h2>Bienvenue sur <span>Campus Humanitaire</span></h2>
+      <p>Que vous soyez débutant ou expérimenté, donnez forme à vos aspirations solidaires en vous préparant aux métiers de l’humanitaire et du développement.</p>
+      <p class="highlighted">Formations certifiantes alignées sur les standards internationaux, outils pratiques, stages encadrés : une préparation exigeante pour un engagement durable.</p>
+    </div>
+  </section>
 
-    <script>
-        const burger = document.getElementById('burger');
-        const navLinks = document.getElementById('nav-links');
-        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  <footer>
+    <p>&copy; 2025 Campus Humanitaire – Tous droits réservés.</p>
+  </footer>
 
-        burger.addEventListener('click', () => {
-            navLinks.classList.toggle('nav-active');
-        });
+  <script>
+    const burger = document.getElementById("burger");
+    const navLinks = document.getElementById("nav-links");
 
-        dropdownToggles.forEach(toggle => {
-            toggle.addEventListener('click', function(e) {
-                e.preventDefault();
-                const dropdownMenu = this.nextElementSibling;
-                dropdownMenu.classList.toggle('show');
-            });
-        });
-    </script>
+    burger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  </script>
 </body>
 </html>
