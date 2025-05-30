@@ -1,53 +1,63 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>campushumanitaire.org</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Humanitaire</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <nav class="navbar">
+            <div class="burger" id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="logo-container">
+                <img src="logo.png" alt="Campus Humanitaire" class="logo">
+                <span class="site-title">Campus Humanitaire</span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Formations</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="filiere-meal.html">Filière MEAL+</a></li>
+                        <li><a href="filiere-projets.html">Filière Projets</a></li>
+                        <li><a href="filiere-fsl.html">Filière FSL</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Ressources</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header>
-  <div class="navbar">
-    <!-- Burger menu -->
-    <input type="checkbox" id="toggle-menu">
-    <label for="toggle-menu" class="burger">&#9776;</label>
+    <main>
+        <section class="hero">
+            <h1>Former les bâtisseurs de la qualité humanitaire et développementale</h1>
+            <p>Des formations professionnalisantes pour les acteurs du changement</p>
+        </section>
+    </main>
 
-    <!-- Logo -->
-    <div class="logo">
-      <a href="index.html"><img src="images/logo.png" alt="Logo du Centre"></a>
-    </div>
+    <script>
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('nav-links');
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 
-    <!-- Menu principal -->
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li class="dropdown">
-          <a href="#">Formations</a>
-          <ul class="submenu">
-            <li><a href="filiere-meal.html">Filière MEAL+</a></li>
-            <li><a href="filiere-projets.html">Filière Gestion de projet</a></li>
-            <li><a href="filiere-fsl.html">Filière FSL</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Ressources</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+        });
 
-<main>
-  <section class="hero">
-    <h1>Bienvenue sur campushumanitaire.org</h1>
-    <p>Formations professionnelles pour bâtir l'humanitaire et le développement</p>
-  </section>
-</main>
-
-<footer>
-  <p>&copy; 2025 campushumanitaire.org - Tous droits réservés</p>
-</footer>
-
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const dropdownMenu = this.nextElementSibling;
+                dropdownMenu.classList.toggle('show');
+            });
+        });
+    </script>
 </body>
 </html>
