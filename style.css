@@ -1,67 +1,88 @@
-/* === En-tête avec logo et titre central === */
-.site-header {
-  background-color: #002b4f; /* Bleu foncé */
-  padding: 20px 0;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Style général */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+/* En-tête du site */
+header {
+    background-color: #1a237e; /* Bleu foncé */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
 
-.site-logo {
-  width: 60px;
-  height: auto;
+/* Titre principal */
+header h1 {
+    font-size: 36px;
+    color: #ff5722; /* Orange */
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
-.site-title {
-  color: #f0650e; /* Orange élégant */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 2em;
-  font-weight: 600;
-  margin: 0;
+/* Barre de navigation */
+nav {
+    background-color: #1a237e;
 }
 
-/* === Navigation simple === */
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  background-color: #003c6c;
-  margin: 0;
-  padding: 10px 0;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.main-nav li {
-  margin: 0 15px;
+nav ul li {
+    margin: 0;
 }
 
-.main-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+nav ul li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
 }
 
-.main-nav a:hover {
-  text-decoration: underline;
+nav ul li a:hover {
+    background-color: #0d47a1;
 }
 
-/* === Contenu principal === */
+/* Section principale */
 main {
-  padding: 40px 20px;
-  text-align: center;
+    padding: 40px 20px;
+    text-align: center;
 }
 
-/* === Pied de page === */
-.site-footer {
-  background-color: #002b4f;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 40px;
+main h2 {
+    color: #1a237e;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Pied de page */
+footer {
+    background-color: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
 }
