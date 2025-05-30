@@ -13,11 +13,34 @@ body {
   line-height: 1.6;
 }
 
-/* HEADER */
+/* TOP BANNER (LOGO ZONE) */
+.top-banner {
+  background-color: #ffa500; /* orange léger */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-container img {
+  height: 60px;
+}
+
+.logo-container h1 {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+/* HEADER MENU */
 header {
   background-color: #004080;
-  padding: 0.5rem 1rem;
-  color: #fff;
+  padding: 0.3rem 1rem;
 }
 
 .nav-container {
@@ -26,21 +49,6 @@ header {
   align-items: center;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-}
-
-.logo-container img {
-  height: 50px;
-  margin-right: 10px;
-}
-
-.logo-container h1 {
-  font-size: 1.2rem;
-}
-
-/* BURGER */
 .burger {
   display: none;
   flex-direction: column;
@@ -54,11 +62,11 @@ header {
   background-color: #fff;
 }
 
-/* NAVBAR */
 .navbar {
   list-style: none;
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .navbar > li {
@@ -152,7 +160,7 @@ header {
   }
 }
 
-/* SECTION ACCUEIL */
+/* BANNIERE */
 .banner {
   background-image: url('images/humanitarian-banner.jpg');
   background-size: cover;
