@@ -1,55 +1,45 @@
-/* style.css – Version responsive et structure révisée */
-
-/* RESET DE BASE */
+/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
+  background-color: #f9f9f9;
   color: #333;
 }
 
-/* EN-TÊTE */
 header {
-  background-color: #0a1a2f;
+  background-color: #002b45;
   color: #fff;
   padding: 20px 0;
   text-align: center;
   position: relative;
 }
 
-.logo {
-  max-width: 80px;
-  height: auto;
-  display: block;
-  margin: 0 auto 10px;
-}
-
-h1 {
+header h1 {
+  font-size: 2rem;
   color: orange;
-  font-size: 2.2rem;
+  margin-bottom: 5px;
 }
 
-/* NAVIGATION */
 nav {
-  background-color: #0f2b4d;
+  background-color: #00395d;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  position: relative;
 }
 
 nav ul {
-  display: flex;
   list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 nav ul li {
@@ -58,127 +48,116 @@ nav ul li {
 
 nav ul li a {
   display: block;
-  padding: 15px 20px;
-  color: #fff;
+  padding: 10px 15px;
+  color: white;
   text-decoration: none;
   transition: background 0.3s;
 }
 
 nav ul li a:hover {
-  background-color: #1e3d66;
+  background-color: #00588c;
 }
 
-/* MENU DÉROULANT */
+/* Sous-menus */
 nav ul li ul {
   display: none;
   position: absolute;
-  background-color: #1e3d66;
   top: 100%;
   left: 0;
-  min-width: 220px;
+  background-color: #00395d;
+  min-width: 180px;
   z-index: 1000;
   flex-direction: column;
 }
 
 nav ul li:hover > ul {
   display: flex;
-}
-
-nav ul li ul li {
-  width: 100%;
-}
-
-/* MENU BURGER */
-.burger {
-  display: none;
-  cursor: pointer;
   flex-direction: column;
-  position: absolute;
-  top: 25px;
-  right: 20px;
-  z-index: 1001;
 }
 
-.burger span {
-  height: 4px;
-  width: 25px;
-  background: white;
-  margin-bottom: 5px;
-  border-radius: 2px;
+nav ul li ul li a {
+  padding: 10px;
+  white-space: nowrap;
 }
 
-/* MENU OUVERT EN MOBILE */
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    background-color: #0f2b4d;
-  }
-
-  nav ul.show {
-    display: flex;
-  }
-
-  nav ul li ul {
-    position: static;
-  }
-
-  nav ul li:hover > ul {
-    display: none;
-  }
-
-  nav ul li:focus-within > ul {
-    display: flex;
-  }
-
-  .burger {
-    display: flex;
-  }
-}
-
-/* CONTENU PRINCIPAL */
 main {
-  padding: 30px 15px;
-  max-width: 1000px;
-  margin: auto;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #002b45;
 }
 
 section {
   margin-bottom: 40px;
 }
 
-h2 {
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-  color: #0f2b4d;
-}
-
-p {
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-
-/* PIED DE PAGE */
 footer {
-  background-color: #0a1a2f;
-  color: #fff;
+  background-color: #002b45;
+  color: white;
   text-align: center;
   padding: 15px 10px;
-  font-size: 0.9rem;
+  margin-top: 50px;
 }
 
-/* RESPONSIVE */
-@media screen and (max-width: 600px) {
-  h1 {
-    font-size: 1.6rem;
+/* Responsive */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-left: auto;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    display: none;
+    width: 100%;
   }
-  h2 {
-    font-size: 1.3rem;
+
+  nav ul.show {
+    display: flex;
   }
-  p {
-    font-size: 0.95rem;
+
+  .burger {
+    display: flex;
   }
+
+  nav ul li {
+    width: 100%;
+    text-align: left;
+  }
+
+  nav ul li ul {
+    position: static;
+    display: none;
+  }
+
+  nav ul li:hover > ul {
+    display: block;
+  }
+}
+
+.logo {
+  max-height: 60px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+/* Ajout pour pages spécifiques */
+.page-title {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #00395d;
 }
