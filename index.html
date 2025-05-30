@@ -1,74 +1,66 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Campus Humanitaire</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Humanitaire</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <img src="logo.png" alt="Logo Campus Humanitaire" class="logo" />
-      <h1>Campus Humanitaire</h1>
-      <nav>
-        <div class="burger" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <ul id="menu">
-          <li><a href="index.html">Accueil</a></li>
-          <li class="dropdown">
-            <a href="#">Formations</a>
-            <ul class="submenu">
-              <li><a href="filiere-meal.html">Filière MEAL+</a></li>
-              <li><a href="filiere-projets.html">Filière Projets</a></li>
-              <!-- Ajouter ici d'autres filières plus tard -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="Logo Campus Humanitaire">
+                <span class="site-title">Campus Humanitaire</span>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#">Formations ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="filiere-meal.html">Filière MEAL+</a></li>
+                        <li><a href="filiere-projets.html">Filière Projets</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Ressources</a></li>
+                <li><a href="login.html">Espace Étudiant</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-          </li>
-          <li><a href="#">Ressources</a></li>
-          <li><a href="#">À propos</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+        </nav>
+    </header>
 
-  <main>
-    <section class="hero">
-      <h2>Former les bâtisseurs de la qualité humanitaire et développementale</h2>
-      <p>Des formations certifiantes, professionnalisantes et adaptées aux réalités du terrain humanitaire.</p>
-    </section>
+    <main>
+        <section class="hero">
+            <h1>Former les bâtisseurs de la qualité humanitaire et développementale</h1>
+            <p>Des formations de niveau 6 en lien avec les besoins réels des ONG et acteurs de terrain</p>
+        </section>
 
-    <section class="intro">
-      <h3>Notre mission</h3>
-      <p>Répondre aux besoins critiques des ONG en renforçant les compétences des professionnels du suivi-évaluation, de la gestion de projets et de la redevabilité.</p>
-    </section>
+        <section class="formations">
+            <h2>Nos Filières</h2>
+            <div class="filiere-card">
+                <h3>Filière MEAL+</h3>
+                <p>Une filière pour former des coordinateurs MEAL, des analystes de données et des spécialistes de la redevabilité humanitaire.</p>
+                <a href="filiere-meal.html" class="btn">Découvrir</a>
+            </div>
+            <div class="filiere-card">
+                <h3>Filière Projets</h3>
+                <p>Une filière dédiée à la gestion de projets humanitaires et de développement : cycle PME, financement, sécurité, logistique...</p>
+                <a href="filiere-projets.html" class="btn">Découvrir</a>
+            </div>
+        </section>
+    </main>
 
-    <section class="highlights">
-      <div class="card">
-        <h4>Filière MEAL+</h4>
-        <p>Une certification en 6 mois pour devenir Coordinateur MEAL, Analyste de données, Chargé AAP ou GPH.</p>
-        <a href="filiere-meal.html" class="btn">Découvrir</a>
-      </div>
-      <div class="card">
-        <h4>Filière Projets</h4>
-        <p>Maîtrisez les compétences en gestion de projets humanitaires, sécurité alimentaire, WASH, logistique.</p>
-        <a href="filiere-projets.html" class="btn">Explorer</a>
-      </div>
-    </section>
-  </main>
+    <footer>
+        <p>&copy; 2025 Campus Humanitaire. Tous droits réservés.</p>
+    </footer>
 
-  <footer>
-    <p>&copy; 2025 Campus Humanitaire – Tous droits réservés</p>
-  </footer>
-
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('menu');
-      menu.classList.toggle('open');
-    }
-  </script>
+    <script>
+        // Burger menu toggle
+        document.getElementById('mobile-menu').addEventListener('click', function () {
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
