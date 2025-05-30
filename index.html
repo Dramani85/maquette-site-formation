@@ -7,84 +7,94 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo-container">
-        <img src="logo.png" alt="Logo Campus Humanitaire" class="logo" />
-      </div>
-      <div class="burger" id="burger">&#9776;</div>
-      <ul class="nav-links" id="nav-links">
-        <li class="has-submenu">
-          <a href="#">Accueil</a>
-          <ul class="submenu">
-            <li><a href="#">Qui sommes-nous ?</a></li>
-            <li><a href="#">Notre mission</a></li>
-            <li><a href="#">Nos partenaires de formations</a></li>
-            <li><a href="#">Conditions générales</a></li>
-            <li><a href="#">Politiques</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </li>
-        <li class="has-submenu">
-          <a href="#">Formations</a>
-          <ul class="submenu">
-            <li><a href="#">Certifications Niveau 6</a></li>
-            <li><a href="#">Formations de courte durée</a></li>
-            <li><a href="#">Formations sur mesure</a></li>
-          </ul>
-        </li>
-        <li class="has-submenu">
-          <a href="#">Méthodologie</a>
-          <ul class="submenu">
-            <li><a href="#">Catalogue des formations</a></li>
-            <li><a href="#">Localisation (présentiel, ligne, hybride)</a></li>
-            <li><a href="#">Méthodes de facilitation</a></li>
-            <li><a href="#">Évaluation</a></li>
-          </ul>
-        </li>
-        <li class="has-submenu">
-          <a href="#">Campus virtuel</a>
-          <ul class="submenu">
-            <li><a href="#">Espace étudiant</a></li>
-            <li><a href="#">Espace facilitateur</a></li>
-          </ul>
-        </li>
-        <li class="has-submenu">
-          <a href="#">Offre aux organisations</a>
-          <ul class="submenu">
-            <li><a href="#">Formations sur demande</a></li>
-            <li><a href="#">Consultations et missions</a></li>
-            <li><a href="#">Paiement en ligne</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Ressources</a></li>
-        <li><a href="#">Actualités</a></li>
-        <li><a href="#">Espace candidat</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section class="welcome-banner">
-    <div class="welcome-content">
-      <h2>Bienvenue sur <span>Campus Humanitaire</span></h2>
-      <p>Que vous soyez débutant ou expérimenté, donnez forme à vos aspirations solidaires en vous préparant aux métiers de l’humanitaire et du développement.</p>
-      <p class="highlighted">Formations certifiantes alignées sur les standards internationaux, outils pratiques, stages encadrés : une préparation exigeante pour un engagement durable.</p>
+<header>
+  <div class="nav-container">
+    <div class="burger" onclick="toggleMenu()"> 
+      <div></div><div></div><div></div> 
     </div>
-  </section>
 
-  <footer>
-    <p>&copy; 2025 Campus Humanitaire – Tous droits réservés.</p>
-  </footer>
+    <div class="logo-container">
+      <img src="images/logo.png" alt="Logo Campus Humanitaire" />
+      <h1>Campus Humanitaire</h1>
+    </div>
 
-  <script>
-    const burger = document.getElementById("burger");
-    const navLinks = document.getElementById("nav-links");
+    <ul class="navbar" id="navbar">
+      <li>
+        <a href="#">Accueil</a>
+        <ul>
+          <li><a href="#">Qui sommes-nous ?</a></li>
+          <li><a href="#">Notre mission</a></li>
+          <li><a href="#">Nos partenaires de formations</a></li>
+          <li><a href="#">Conditions générales</a></li>
+          <li><a href="#">Politiques</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </li>
 
-    burger.addEventListener("click", () => {
-      navLinks.classList.toggle("show");
-    });
-  </script>
+      <li>
+        <a href="#">Formations</a>
+        <ul>
+          <li><a href="#">Formations certifiantes (Niveau 6)</a></li>
+          <li><a href="#">Formations de courte durée</a></li>
+          <li><a href="#">Formations sur mesure</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#">Méthodologie</a>
+        <ul>
+          <li><a href="#">Catalogue téléchargeable</a></li>
+          <li><a href="#">Localisation</a></li>
+          <li><a href="#">Méthodes de facilitation</a></li>
+          <li><a href="#">Évaluation</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#">Campus virtuel</a>
+        <ul>
+          <li><a href="#">Espace étudiant</a></li>
+          <li><a href="#">Espace facilitateur</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#">Offre aux organisations</a>
+        <ul>
+          <li><a href="#">Formations sur demande</a></li>
+          <li><a href="#">Consultations et missions</a></li>
+          <li><a href="#">Paiement en ligne</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">Ressources</a></li>
+      <li><a href="#">Actualités</a></li>
+      <li><a href="#">Espace candidat</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="banner">
+  <h2>Bienvenue sur Campus Humanitaire</h2>
+  <p>
+    Que vous soyez débutant ou expérimenté, trouvez forme à vos aspirations solidaires
+    en vous préparant pour les métiers humanitaires et du développement.<br>
+    Formations certifiantes aux standards internationaux, avec des outils concrets et des stages encadrés.
+  </p>
+</section>
+
+<script>
+function toggleMenu() {
+  document.getElementById('navbar').classList.toggle('active');
+  const items = document.querySelectorAll('.navbar > li');
+  items.forEach(item => {
+    item.onclick = () => item.classList.toggle('active');
+  });
+}
+</script>
+
 </body>
 </html>
