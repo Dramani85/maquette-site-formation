@@ -1,136 +1,163 @@
-/* RESET */
+/* RESET DE BASE */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #333;
 }
 
-header {
-    background-color: #004080;
-    color: white;
-    padding: 0.5rem 1rem;
-    position: relative;
-}
-
+/* NAVIGATION */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1e3a8a;
+  padding: 10px 20px;
+  position: relative;
 }
 
 .logo {
-    height: 50px;
-    margin-right: 10px;
-}
-
-.site-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
+  height: 50px;
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 1rem;
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
-.nav-links li {
-    position: relative;
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 0.5rem 0.8rem;
-    display: block;
+.nav-links li a:hover {
+  background-color: #3b4cca;
+  border-radius: 5px;
 }
 
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #004080;
-    padding: 0;
-    list-style: none;
-    border: 1px solid #ccc;
-    min-width: 200px;
-    z-index: 1000;
-}
-
-.dropdown-menu li a {
-    padding: 0.5rem 1rem;
-    color: white;
-    border-bottom: 1px solid #ccc;
-}
-
-.dropdown-menu li a:hover {
-    background-color: #0066cc;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.show {
-    display: block;
-}
-
+/* BURGER MENU */
 .burger {
-    display: none;
-    cursor: pointer;
+  font-size: 26px;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+/* SUBMENU */
+.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #1e3a8a;
+  top: 40px;
+  left: 0;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+.submenu li {
+  width: 100%;
+}
+
+.submenu li a {
+  padding: 10px;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+    order: -1;
+  }
+
+  .nav-links {
     flex-direction: column;
-    justify-content: space-between;
-    height: 21px;
-    margin-right: 1rem;
+    align-items: flex-start;
+    background-color: #1e3a8a;
+    width: 100%;
+    display: none;
+    padding: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .submenu {
+    position: static;
+  }
+
+  .has-submenu:hover .submenu {
+    display: none;
+  }
+
+  .has-submenu > a::after {
+    content: " ▼";
+    font-size: 12px;
+  }
+
+  .has-submenu > a:focus + .submenu,
+  .has-submenu > a:active + .submenu {
+    display: block;
+  }
 }
 
-.burger div {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    border-radius: 3px;
+/* WELCOME BANNER */
+.welcome-banner {
+  background: url('bg-humanitaire.jpg') center/cover no-repeat;
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
 }
 
-/* Responsive */
-@media screen and (max-width: 768px) {
-    .nav-links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        background-color: #004080;
-    }
+.welcome-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 12px;
+}
 
-    .nav-links.nav-active {
-        display: flex;
-    }
+.welcome-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
 
-    .dropdown-menu {
-        position: static;
-        border: none;
-    }
+.welcome-content h2 span {
+  color: #facc15;
+}
 
-    .burger {
-        display: flex;
-        order: -1;
-    }
+.welcome-content p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
 
-    .navbar {
-        justify-content: flex-start;
-        gap: 1rem;
-    }
+.welcome-content .highlighted {
+  font-weight: bold;
+  color: #e0f2fe;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1e3a8a;
+  color: white;
+  margin-top: 40px;
 }
