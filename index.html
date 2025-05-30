@@ -8,32 +8,59 @@
 </head>
 <body>
   <header>
-    <div class="header-container">
-      <img src="images/logo-campus-humanitaire.png" alt="Logo Campus Humanitaire" class="logo" />
-      <h1>Campus Humanitaire</h1>
+    <div class="container">
+      <img src="images/logo-campus-humanitaire.png" alt="Campus Humanitaire Logo" class="logo" />
+      <h1 class="site-title">Campus Humanitaire</h1>
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="formations.html">Formations</a></li>
+          <li><a href="catalogue.html">Catalogue</a></li>
+          <li><a href="espace-etudiant.html">Espace Étudiant</a></li>
+          <li><a href="espace-enseignant.html">Espace Enseignant</a></li>
+          <li><a href="paiement.html">Paiement</a></li>
+          <li><a href="ressources.html">Ressources</a></li>
+          <!-- D'autres onglets ici -->
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul class="navbar">
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">Formations</a></li>
-        <li><a href="#">Connexion</a></li>
-        <li><a href="#">Catalogue</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main>
-    <section class="intro">
-      <h2>Bienvenue sur le <strong>Campus Humanitaire</strong></h2>
-      <p>
-        Une plateforme dédiée à la formation dans les domaines du développement, de l'action humanitaire, et de la coopération internationale.
-      </p>
+    <section class="hero">
+      <h2>Bienvenue sur la plateforme de formation Campus Humanitaire</h2>
+      <p>Formations certifiantes dans les métiers de l’humanitaire et du développement.</p>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <h3>Accès Étudiants</h3>
+        <p>Connectez-vous à vos cours, quiz, exercices et certificats.</p>
+      </div>
+      <div class="feature">
+        <h3>Formations certifiées</h3>
+        <p>Modules spécialisés adaptés aux besoins du terrain.</p>
+      </div>
+      <div class="feature">
+        <h3>Visioconférences</h3>
+        <p>Suivez des sessions en direct ou en différé avec nos formateurs experts.</p>
+      </div>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Campus Humanitaire. Tous droits réservés.</p>
   </footer>
+
+  <script>
+    const toggleButton = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
+
+    toggleButton.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
+
