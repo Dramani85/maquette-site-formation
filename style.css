@@ -1,117 +1,105 @@
-/* Reset CSS de base */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* BASE */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
+  background-color: #f4f6f8;
   color: #333;
   line-height: 1.6;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
+/* HEADER */
 header {
   background-color: #004080;
-  padding: 10px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 0.5rem 1rem;
+  color: #fff;
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
-.logo {
+.logo-container {
   display: flex;
   align-items: center;
 }
 
-.logo img {
-  height: 45px;
+.logo-container img {
+  height: 50px;
   margin-right: 10px;
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  list-style: none;
+.logo-container h1 {
+  font-size: 1.2rem;
 }
 
-.navbar li {
-  position: relative;
+/* BURGER */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
 }
 
 .navbar > li {
-  margin-left: 20px;
+  position: relative;
 }
 
 .navbar a {
-  color: #fff;
-  font-weight: 500;
-  padding: 10px;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
   display: block;
-  transition: background 0.3s ease;
 }
 
-.navbar a:hover {
-  background-color: #0055aa;
-  border-radius: 5px;
-}
-
-/* Sous-menu */
 .navbar li ul {
+  display: none;
   position: absolute;
+  background-color: #005599;
   top: 100%;
   left: 0;
-  background-color: #004080;
   min-width: 200px;
-  display: none;
-  z-index: 999;
-  border-radius: 4px;
+  z-index: 1000;
 }
 
 .navbar li:hover > ul {
   display: block;
 }
 
-.navbar li ul li {
-  border-bottom: 1px solid #005599;
+.navbar li ul li a:hover {
+  background-color: #0077cc;
 }
 
-.navbar li ul li:last-child {
-  border-bottom: none;
-}
-
-/* Menu burger */
-.burger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 4px;
-}
-
-.burger div {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-}
-
+/* RESPONSIVE */
 @media (max-width: 980px) {
+  .burger {
+    display: flex;
+  }
+
   .navbar {
+    display: none;
     flex-direction: column;
     width: 100%;
-    display: none;
     background-color: #004080;
   }
 
@@ -126,14 +114,11 @@ header {
   .navbar li ul {
     position: static;
     display: none;
+    background-color: #005599;
   }
 
   .navbar li.active > ul {
     display: block;
-  }
-
-  .burger {
-    display: flex;
   }
 
   .nav-container {
@@ -142,48 +127,52 @@ header {
   }
 }
 
-/* Section de bienvenue */
-.hero {
-  background: url('assets/bg-humanitaire.jpg') center/cover no-repeat;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+@media (min-width: 981px) {
+  .navbar {
+    display: flex !important;
+    flex-direction: row;
+  }
+
+  .navbar > li {
+    position: relative;
+  }
+
+  .navbar li ul {
+    display: none;
+    position: absolute;
+    background-color: #004080;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    z-index: 999;
+  }
+
+  .navbar li:hover > ul {
+    display: block;
+  }
+}
+
+/* SECTION ACCUEIL */
+.banner {
+  background-image: url('images/humanitarian-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  color: #fff;
   text-align: center;
-  padding: 20px;
-  position: relative;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-}
-
-.hero-content h1 {
+.banner h2 {
   font-size: 2.5rem;
   margin-bottom: 15px;
-  color: #fff;
+  text-shadow: 1px 1px 2px #000;
 }
 
-.hero-content p {
+.banner p {
   font-size: 1.2rem;
-  color: #f0f0f0;
-}
-
-/* Pied de page simple */
-footer {
-  background-color: #003366;
-  color: #ccc;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 8px;
 }
