@@ -1,66 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Humanitaire</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="logo.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Campus Humanitaire</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="logo.png" alt="Logo Campus Humanitaire">
-                <span class="site-title">Campus Humanitaire</span>
-            </div>
-            <div class="menu-toggle" id="mobile-menu">&#9776;</div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li class="dropdown">
-                    <a href="#">Formations ▾</a>
-                    <ul class="dropdown-content">
-                        <li><a href="filiere-meal.html">Filière MEAL+</a></li>
-                        <li><a href="filiere-projets.html">Filière Projets</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Ressources</a></li>
-                <li><a href="login.html">Espace Étudiant</a></li>
-                <li><a href="contact.html">Contact</a></li>
+
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Campus Humanitaire" height="50" />
+        </a>
+      </div>
+
+      <input type="checkbox" id="toggle-menu">
+      <label for="toggle-menu" class="burger">&#9776;</label>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li class="dropdown">
+            <a href="#">Formations</a>
+            <ul class="submenu">
+              <li><a href="filiere-meal.html">Filière MEAL+</a></li>
+              <li><a href="filiere-projets.html">Filière Gestion de Projets</a></li>
+              <li><a href="filiere-fsl.html">Filière Sécurité alimentaire (FSL)</a></li>
             </ul>
-        </nav>
-    </header>
+          </li>
+          <li><a href="ressources.html">Ressources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <section class="hero">
-            <h1>Former les bâtisseurs de la qualité humanitaire et développementale</h1>
-            <p>Des formations de niveau 6 en lien avec les besoins réels des ONG et acteurs de terrain</p>
-        </section>
+  <main>
+    <section class="hero">
+      <h1>Bienvenue sur le Campus Humanitaire</h1>
+      <p>Formations professionnelles pour bâtir l’humanitaire de demain</p>
+    </section>
 
-        <section class="formations">
-            <h2>Nos Filières</h2>
-            <div class="filiere-card">
-                <h3>Filière MEAL+</h3>
-                <p>Une filière pour former des coordinateurs MEAL, des analystes de données et des spécialistes de la redevabilité humanitaire.</p>
-                <a href="filiere-meal.html" class="btn">Découvrir</a>
-            </div>
-            <div class="filiere-card">
-                <h3>Filière Projets</h3>
-                <p>Une filière dédiée à la gestion de projets humanitaires et de développement : cycle PME, financement, sécurité, logistique...</p>
-                <a href="filiere-projets.html" class="btn">Découvrir</a>
-            </div>
-        </section>
-    </main>
+    <section class="highlights">
+      <div class="highlight">
+        <h2>Filière MEAL+</h2>
+        <p>Suivi, Évaluation, Redevabilité et Apprentissage – 4 parcours certifiants</p>
+        <a href="filiere-meal.html">En savoir plus</a>
+      </div>
+      <div class="highlight">
+        <h2>Filière Gestion de Projets</h2>
+        <p>Formation complète à la gestion de projets humanitaires – certifiée</p>
+        <a href="filiere-projets.html">Découvrir</a>
+      </div>
+      <div class="highlight">
+        <h2>Filière FSL</h2>
+        <p>Sécurité alimentaire et Moyens de subsistance – pour une résilience durable</p>
+        <a href="filiere-fsl.html">Explorer</a>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2025 Campus Humanitaire. Tous droits réservés.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Campus Humanitaire. Tous droits réservés.</p>
+  </footer>
 
-    <script>
-        // Burger menu toggle
-        document.getElementById('mobile-menu').addEventListener('click', function () {
-            document.getElementById('nav-links').classList.toggle('active');
-        });
-    </script>
 </body>
 </html>
