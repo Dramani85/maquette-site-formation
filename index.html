@@ -1,55 +1,51 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Campus Humanitaire</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="logo.png" type="image/png">
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
     <div class="container">
-      <img src="logo.png" alt="Logo Campus Humanitaire" class="logo">
+      <img src="logo.png" alt="Logo Campus Humanitaire" class="logo" />
       <h1 class="site-title">Campus Humanitaire</h1>
-      <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+      <nav>
+        <div class="burger" id="burger">&#9776;</div>
+        <ul id="nav-links">
+          <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="formations.html">Formations</a></li>
+          <li><a href="filiere.html">Filière F-MEAL+</a></li>
+          <li><a href="ressources.html">Ressources</a></li>
+          <li><a href="connexion.html">Connexion</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="navbar">
-      <ul>
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">Formations</a></li>
-        <li><a href="#">Espace Étudiant</a></li>
-        <li><a href="#">Espace Enseignant</a></li>
-        <li><a href="#">Catalogue</a></li>
-        <li><a href="#">Paiement</a></li>
-        <li><a href="#">Ressources</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <section class="hero">
-    <h2>Formez-vous aux métiers du développement et de l'humanitaire</h2>
-    <p>Des formations de qualité, accessibles en ligne et encadrées par des professionnels</p>
-  </section>
+  <main>
+    <section class="hero">
+      <h2>Former les bâtisseurs de la qualité humanitaire et développementale</h2>
+      <p>Rejoignez une communauté engagée pour un impact durable.</p>
+      <a href="filiere.html" class="btn">Découvrir la Filière F-MEAL+</a>
+    </section>
 
-  <section class="features">
-    <div class="feature">
-      <h3>Accès personnalisé</h3>
-      <p>Chaque étudiant dispose d’un compte personnel et sécurisé</p>
-    </div>
-    <div class="feature">
-      <h3>Suivi pédagogique</h3>
-      <p>Tableau de bord, quiz, dépôts de TPE et bulletin de notes automatisé</p>
-    </div>
-    <div class="feature">
-      <h3>Certificats en ligne</h3>
-      <p>Certificat téléchargeable dès validation du parcours de formation</p>
-    </div>
-  </section>
+    <section class="presentation">
+      <h3>Pourquoi choisir le Campus Humanitaire ?</h3>
+      <ul>
+        <li>Programmes intensifs alignés sur les standards internationaux (CHS, SPHERE...)</li>
+        <li>Formations professionnalisantes de 6 mois</li>
+        <li>Encadrement par des experts de terrain</li>
+        <li>Accès aux débouchés humanitaires et développement</li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Campus Humanitaire. Tous droits réservés.</p>
+    <p>&copy; 2025 Campus Humanitaire – Tous droits réservés</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
