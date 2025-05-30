@@ -1,128 +1,87 @@
-[style.css]
-
-body {
-  font-family: Arial, sans-serif;
+/* Réinitialisation */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  box-sizing: border-box;
 }
 
+/* Corps */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f6f8;
+  color: #333;
+  padding: 0 20px;
+}
+
+/* En-tête */
 header {
-  background-color: #00529B;
+  background-color: #004080;
   color: white;
   padding: 20px;
-  text-align: center;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
-nav a {
-  margin: 0 15px;
+header h1 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+/* Barre de navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-left: 0;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-section {
-  padding: 20px;
-  background-color: white;
-  margin: 20px;
+nav ul li a:hover {
+  background-color: #0066cc;
+}
+
+/* Contenu principal */
+main {
+  background: white;
+  padding: 25px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* Pied de page */
 footer {
+  margin-top: 40px;
   text-align: center;
-  padding: 10px;
-  background-color: #eee;
-  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
 }
 
----
+/* Responsive */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-[cours.html]
+  nav ul li a {
+    display: block;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catalogue des cours</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Catalogue des Cours</h1>
-  </header>
-  <section>
-    <ul>
-      <li>MEAL Niveau 6 - Durée : 6 mois - Certificat délivré</li>
-      <li>Gestion de projet humanitaire - 4 mois - Formation hybride</li>
-      <li>Protection et inclusion - 3 mois - En ligne</li>
-    </ul>
-  </section>
-  <footer>
-    <p>&copy; 2025 Institut de Formation</p>
-  </footer>
-</body>
-</html>
-
----
-
-[login.html]
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Connexion Étudiant</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Connexion Étudiant</h1>
-  </header>
-  <section>
-    <form action="#" method="post">
-      <label for="email">Email :</label><br>
-      <input type="email" id="email" name="email"><br>
-      <label for="password">Mot de passe :</label><br>
-      <input type="password" id="password" name="password"><br><br>
-      <button type="submit">Connexion</button>
-    </form>
-  </section>
-  <footer>
-    <p>&copy; 2025 Institut de Formation</p>
-  </footer>
-</body>
-</html>
-
----
-
-[dashboard.html]
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tableau de bord Étudiant</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Tableau de bord</h1>
-  </header>
-  <section>
-    <h2>Bienvenue, [Nom de l'étudiant]</h2>
-    <p>Progrès : 45%</p>
-    <ul>
-      <li>Cours suivis</li>
-      <li>Quiz disponibles</li>
-      <li>Certificats téléchargeables</li>
-    </ul>
-  </section>
-  <footer>
-    <p>&copy; 2025 Institut de Formation</p>
-  </footer>
-</body>
-</html>
