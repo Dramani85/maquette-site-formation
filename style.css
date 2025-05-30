@@ -1,155 +1,136 @@
-/* Reset */
+/* RESET */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Base */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
 }
 
-/* Header */
 header {
-  background-color: #003366;
-  color: white;
-  padding: 10px 20px;
+    background-color: #004080;
+    color: white;
+    padding: 0.5rem 1rem;
+    position: relative;
 }
 
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  position: relative;
-  gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.logo img {
-  height: 50px;
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
-/* Burger */
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 0.8rem;
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #004080;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #ccc;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.dropdown-menu li a {
+    padding: 0.5rem 1rem;
+    color: white;
+    border-bottom: 1px solid #ccc;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #0066cc;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.show {
+    display: block;
+}
+
 .burger {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-  color: white;
-  margin-right: 10px;
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 21px;
+    margin-right: 1rem;
 }
 
-#toggle-menu {
-  display: none;
-}
-
-/* Navigation */
-nav ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 8px 10px;
-}
-
-nav ul li a:hover {
-  background-color: #005599;
-  border-radius: 5px;
-}
-
-/* Dropdown */
-.dropdown {
-  position: relative;
-}
-
-.submenu {
-  display: none;
-  position: absolute;
-  top: 40px;
-  background-color: #004080;
-  list-style: none;
-  padding: 10px 0;
-  min-width: 200px;
-  z-index: 1000;
-}
-
-.submenu li a {
-  display: block;
-  padding: 10px 20px;
-  color: white;
-  text-decoration: none;
-}
-
-.submenu li a:hover {
-  background-color: #005599;
-}
-
-.dropdown:hover .submenu {
-  display: block;
-}
-
-/* Hero Section */
-.hero {
-  padding: 60px 20px;
-  text-align: center;
-  background: #dde6f0;
-}
-
-.hero h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1.2em;
-}
-
-/* Footer */
-footer {
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 20px;
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .burger {
-    display: block;
-  }
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: #004080;
+    }
 
-  nav {
-    width: 100%;
-  }
+    .nav-links.nav-active {
+        display: flex;
+    }
 
-  nav ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #003366;
-    padding: 10px 0;
-  }
+    .dropdown-menu {
+        position: static;
+        border: none;
+    }
 
-  #toggle-menu:checked ~ nav ul {
-    display: flex;
-  }
+    .burger {
+        display: flex;
+        order: -1;
+    }
 
-  nav ul li {
-    width: 100%;
-    text-align: left;
-    padding-left: 20px;
-  }
-
-  .submenu {
-    position: static;
-    background-color: #004080;
-    padding-left: 20px;
-  }
+    .navbar {
+        justify-content: flex-start;
+        gap: 1rem;
+    }
 }
