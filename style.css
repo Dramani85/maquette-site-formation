@@ -13,9 +13,9 @@ body {
   line-height: 1.6;
 }
 
-/* TOP BANNER (zone blanche assortie au fond du logo) */
+/* BANDEAU SUPÉRIEUR */
 .top-banner {
-  background-color: #ffffff; /* blanc pur */
+  background-color: #f4f5f3; /* même teinte que le fond du logo */
   padding: 12px 20px;
   display: flex;
   justify-content: center;
@@ -34,10 +34,10 @@ body {
 
 .logo-container h1 {
   font-size: 1.8rem;
-  color: #ffa500; /* orange */
+  color: #ffa500;
 }
 
-/* HEADER MENU */
+/* MENU */
 header {
   background-color: #004080;
   padding: 0.3rem 1rem;
@@ -173,8 +173,8 @@ header {
 
 .hero-overlay {
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 40px 20px;
-  border-radius: 10px;
+  padding: 40px;
+  border-radius: 8px;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -187,5 +187,4 @@ header {
 
 .hero p {
   font-size: 1.2rem;
-  line-height: 1.8;
 }
