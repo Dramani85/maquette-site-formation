@@ -1,190 +1,101 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Humanitaire</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+</head>
+<body>
+
+<!-- Bandeau supérieur -->
+<div class="top-banner">
+  <div class="logo-container">
+    <img class="logo" src="https://i.postimg.cc/wvfFPYY1/file-000000005fa061f893833114ed9b3bf6.png" alt="Logo Campus Humanitaire" />
+    <h1>Campus Humanitaire</h1>
+  </div>
+</div>
+
+<!-- Menu -->
+<header>
+  <div class="nav-container">
+    <div class="burger" onclick="toggleMenu()"> 
+      <div></div><div></div><div></div> 
+    </div>
+    <ul class="navbar" id="navbar">
+      <!-- Menu items identiques -->
+    </ul>
+  </div>
+</header>
+
+<!-- Bannière -->
+<section class="hero" style="background-image: url('https://i.postimg.cc/dtwdPSn6/file-00000000ca9061fd86f729cfc47a2a1d.png');">
+  <div class="hero-overlay">
+    <h2>Bienvenue sur le Campus Humanitaire</h2>
+    <p>
+      Développez vos compétences dans l’humanitaire et le développement. <br>
+      Des formations concrètes, certifiantes, encadrées, et aux standards internationaux.
+    </p>
+  </div>
+</section>
+
+<!-- Carrousel d’actualités -->
+<section class="carousel-container">
+  <h3>Actualités récentes</h3>
+  <div class="news-carousel">
+    <div><h4>Nouvelle session de formation Niveau 6</h4><p>Inscriptions ouvertes jusqu'au 30 juin !</p></div>
+    <div><h4>Partenariat avec Bioforce</h4><p>Renforcement de la qualité pédagogique et certification conjointe.</p></div>
+    <div><h4>Webinaire gratuit le 10 juin</h4><p>Inscrivez-vous pour découvrir nos programmes certifiants.</p></div>
+  </div>
+</section>
+
+<!-- Pied de page -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>Campus Humanitaire</h4>
+      <p>Formations & expertise pour les acteurs du changement humanitaire.</p>
+    </div>
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <p>Email : contact@campushumanitaire.org</p>
+      <p>Tél : +243 000 000 000</p>
+    </div>
+    <div class="footer-section">
+      <h4>Suivez-nous</h4>
+      <p>
+        <a href="#">Facebook</a> | <a href="#">LinkedIn</a> | <a href="#">Twitter</a>
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Campus Humanitaire. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('navbar').classList.toggle('active');
+  const items = document.querySelectorAll('.navbar > li');
+  items.forEach(item => {
+    item.onclick = () => item.classList.toggle('active');
+  });
 }
 
-/* BASE */
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f4f6f8;
-  color: #333;
-  line-height: 1.6;
-}
+$(document).ready(function(){
+  $('.news-carousel').slick({
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: false
+  });
+});
+</script>
 
-/* BANDEAU SUPÉRIEUR */
-.top-banner {
-  background-color: #f4f5f3; /* même teinte que le fond du logo */
-  padding: 12px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.logo-container img {
-  height: 60px;
-}
-
-.logo-container h1 {
-  font-size: 1.8rem;
-  color: #ffa500;
-}
-
-/* MENU */
-header {
-  background-color: #004080;
-  padding: 0.3rem 1rem;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.burger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.burger div {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-}
-
-.navbar {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.navbar > li {
-  position: relative;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  display: block;
-}
-
-.navbar li ul {
-  display: none;
-  position: absolute;
-  background-color: #005599;
-  top: 100%;
-  left: 0;
-  min-width: 200px;
-  z-index: 1000;
-}
-
-.navbar li:hover > ul {
-  display: block;
-}
-
-.navbar li ul li a:hover {
-  background-color: #0077cc;
-}
-
-/* RESPONSIVE */
-@media (max-width: 980px) {
-  .burger {
-    display: flex;
-  }
-
-  .navbar {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #004080;
-  }
-
-  .navbar.active {
-    display: flex;
-  }
-
-  .navbar > li {
-    width: 100%;
-  }
-
-  .navbar li ul {
-    position: static;
-    display: none;
-    background-color: #005599;
-  }
-
-  .navbar li.active > ul {
-    display: block;
-  }
-
-  .nav-container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-@media (min-width: 981px) {
-  .navbar {
-    display: flex !important;
-    flex-direction: row;
-  }
-
-  .navbar > li {
-    position: relative;
-  }
-
-  .navbar li ul {
-    display: none;
-    position: absolute;
-    background-color: #004080;
-    top: 100%;
-    left: 0;
-    min-width: 200px;
-    z-index: 999;
-  }
-
-  .navbar li:hover > ul {
-    display: block;
-  }
-}
-
-/* BANNIÈRE */
-.hero {
-  background-image: url('https://i.postimg.cc/dtwdPSn6/file-00000000ca9061fd86f729cfc47a2a1d.png');
-  background-size: cover;
-  background-position: center;
-  padding: 80px 20px;
-  color: #fff;
-  text-align: center;
-  position: relative;
-}
-
-.hero-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 40px;
-  border-radius: 8px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  text-shadow: 1px 1px 2px #000;
-}
-
-.hero p {
-  font-size: 1.2rem;
-}
+</body>
+</html>
