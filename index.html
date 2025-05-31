@@ -8,93 +8,98 @@
 </head>
 <body>
 
-  <!-- Bandeau supérieur -->
-  <div class="top-banner">
-    <div class="logo-container">
-      <img class="logo" src="https://i.postimg.cc/wvfFPYY1/file-000000005fa061f893833114ed9b3bf6.png" alt="Logo Campus Humanitaire" />
-      <h1>Campus Humanitaire</h1>
-    </div>
+<!-- Bandeau supérieur -->
+<div class="top-banner">
+  <div class="logo-container">
+    <img class="logo" src="https://i.postimg.cc/wvfFPYY1/file-000000005fa061f893833114ed9b3bf6.png" alt="Logo Campus Humanitaire" />
+    <h1>Campus Humanitaire</h1>
   </div>
+</div>
 
-  <!-- Menu -->
-  <header>
-    <div class="nav-container">
-      <div class="burger" onclick="toggleMenu()"> 
-        <div></div><div></div><div></div> 
-      </div>
-
-      <ul class="navbar" id="navbar">
-        <li>
-          <a href="#">Accueil</a>
-          <ul>
-            <li><a href="#">Qui sommes-nous ?</a></li>
-            <li><a href="#">Notre mission</a></li>
-            <li><a href="#">Nos partenaires</a></li>
-            <li><a href="#">Conditions générales</a></li>
-            <li><a href="#">Politiques</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Formations</a>
-          <ul>
-            <li><a href="#">Certifiantes (Niveau 6)</a></li>
-            <li><a href="#">Courtes durées</a></li>
-            <li><a href="#">Sur mesure</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Méthodologie</a>
-          <ul>
-            <li><a href="#">Catalogue</a></li>
-            <li><a href="#">Méthodes</a></li>
-            <li><a href="#">Évaluation</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Campus virtuel</a>
-          <ul>
-            <li><a href="#">Espace étudiant</a></li>
-            <li><a href="#">Espace facilitateur</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Organisations</a>
-          <ul>
-            <li><a href="#">Formations sur demande</a></li>
-            <li><a href="#">Consultations</a></li>
-            <li><a href="#">Paiement</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Ressources</a></li>
-        <li><a href="#">Actualités</a></li>
-        <li><a href="#">Espace candidat</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+<!-- Menu -->
+<header>
+  <div class="nav-container">
+    <div class="burger" onclick="toggleMenu()"> 
+      <div></div><div></div><div></div> 
     </div>
-  </header>
 
-  <!-- Bannière d'accueil -->
-  <section class="hero">
-    <div class="hero-overlay">
-      <h2>Bienvenue sur le Campus Humanitaire</h2>
-      <p>
-        Développez vos compétences dans l’humanitaire et le développement. <br>
-        Des formations concrètes, certifiantes, encadrées, et aux standards internationaux.
-      </p>
-    </div>
-  </section>
+    <ul class="navbar" id="navbar">
+      <li>
+        <a href="#">Accueil</a>
+        <ul>
+          <li><a href="#">Qui sommes-nous ?</a></li>
+          <li><a href="#">Notre mission</a></li>
+          <li><a href="#">Nos partenaires</a></li>
+          <li><a href="#">Conditions générales</a></li>
+          <li><a href="#">Politiques</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </li>
 
-  <script>
-    function toggleMenu() {
-      const navbar = document.getElementById('navbar');
-      navbar.classList.toggle('active');
-      const items = document.querySelectorAll('.navbar > li');
-      items.forEach(item => {
-        item.onclick = () => item.classList.toggle('active');
-      });
-    }
-  </script>
+      <li>
+        <a href="#">Formations</a>
+        <ul>
+          <li><a href="#">Certifiantes (Niveau 6)</a></li>
+          <li><a href="#">Courtes durées</a></li>
+          <li><a href="#">Sur mesure</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#">Méthodologie</a>
+        <ul>
+          <li><a href="#">Catalogue</a></li>
+          <li><a href="#">Méthodes</a></li>
+          <li><a href="#">Évaluation</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#">Campus virtuel</a>
+        <ul>
+          <li><a href="#">Espace étudiant</a></li>
+          <li><a href="#">Espace facilitateur</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#">Organisations</a>
+        <ul>
+          <li><a href="#">Formations sur demande</a></li>
+          <li><a href="#">Consultations</a></li>
+          <li><a href="#">Paiement</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">Ressources</a></li>
+      <li><a href="#">Actualités</a></li>
+      <li><a href="#">Espace candidat</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- Bannière -->
+<section class="hero">
+  <div class="hero-overlay">
+    <h2>Bienvenue sur le Campus Humanitaire</h2>
+    <p>
+      Développez vos compétences dans l’humanitaire et le développement. <br>
+      Des formations concrètes, certifiantes, encadrées, et aux standards internationaux.
+    </p>
+  </div>
+</section>
+
+<script>
+function toggleMenu() {
+  document.getElementById('navbar').classList.toggle('active');
+  const items = document.querySelectorAll('.navbar > li');
+  items.forEach(item => {
+    item.onclick = () => item.classList.toggle('active');
+  });
+}
+</script>
+
 </body>
 </html>
