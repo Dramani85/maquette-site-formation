@@ -5,12 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Campus Humanitaire</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .logo {
-      max-height: 60px;
-      width: auto;
-    }
-  </style>
 </head>
 <body>
 
@@ -87,25 +81,13 @@
 </header>
 
 <!-- Bannière -->
-<section class="hero" style="background-image: url('https://i.postimg.cc/dtwdPSn6/file-00000000ca9061fd86f729cfc47a2a1d.png');">
+<section class="hero">
   <div class="hero-overlay">
     <h2>Bienvenue sur le Campus Humanitaire</h2>
     <p>
-      Développez vos compétences dans l’humanitaire et le développement. <br>
+      Développez vos compétences dans l’humanitaire et le développement.<br>
       Des formations concrètes, certifiantes, encadrées, et aux standards internationaux.
     </p>
-  </div>
-</section>
-
-<!-- Carrousel d'actualités -->
-<section class="carousel-section">
-  <h2>Actualités récentes</h2>
-  <div class="carousel">
-    <div class="carousel-track">
-      <div class="carousel-item">🔔 Lancement de la formation MEAL – Niveau 6 – Session Juillet</div>
-      <div class="carousel-item">📢 Ouverture des inscriptions au parcours Sécurité Alimentaire</div>
-      <div class="carousel-item">📍 Atelier de préparation aux urgences humanitaires – En ligne</div>
-    </div>
   </div>
 </section>
 
@@ -113,30 +95,14 @@
 <footer>
   <div class="footer-content">
     <p>&copy; 2025 Campus Humanitaire. Tous droits réservés.</p>
-    <p>
-      <a href="#">Mentions légales</a> |
-      <a href="#">Politique de confidentialité</a> |
-      <a href="#">Contact</a>
-    </p>
+    <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
   </div>
 </footer>
 
 <script>
 function toggleMenu() {
   document.getElementById('navbar').classList.toggle('active');
-  const items = document.querySelectorAll('.navbar > li');
-  items.forEach(item => {
-    item.onclick = () => item.classList.toggle('active');
-  });
 }
-
-// Carrousel automatique
-const track = document.querySelector('.carousel-track');
-let index = 0;
-setInterval(() => {
-  index = (index + 1) % track.children.length;
-  track.style.transform = `translateX(-${index * 100}%)`;
-}, 4000);
 </script>
 
 </body>
