@@ -108,9 +108,9 @@ header {
   background-image: url('https://images.unsplash.com/photo-1584948328924-0c64c7e4fb79?auto=format&fit=crop&w=1600&q=80');
   background-size: cover;
   background-position: center;
+  position: relative;
   padding: 100px 20px;
   color: #fff;
-  position: relative;
   text-align: center;
 }
 
