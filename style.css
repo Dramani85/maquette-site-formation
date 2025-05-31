@@ -28,19 +28,19 @@ body {
   gap: 15px;
 }
 
-.logo {
+.logo-container img {
   height: 60px;
 }
 
 .logo-container h1 {
   font-size: 1.8rem;
-  color: #ffa500; /* orange */
+  color: #ffa500;
 }
 
 /* NAVIGATION */
 header {
   background-color: #004080;
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 1rem;
 }
 
 .nav-container {
@@ -98,34 +98,33 @@ header {
   background-color: #0077cc;
 }
 
-/* HERO SECTION */
+/* HERO BANNER */
 .hero {
-  background-image: url('https://i.postimg.cc/Y9M0Rh5F/humanitarian-banner.png');
+  background-image: url('https://i.postimg.cc/dtwdPSn6/file-00000000ca9061fd86f729cfc47a2a1d.png');
   background-size: cover;
   background-position: center;
   padding: 100px 20px;
   text-align: center;
   position: relative;
-  color: #fff;
+  color: white;
 }
 
 .hero-overlay {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
   border-radius: 10px;
-  display: inline-block;
 }
 
 .hero h2 {
   font-size: 2.8rem;
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 3px #000;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px #000;
 }
 
 .hero p {
   font-size: 1.2rem;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 /* RESPONSIVE */
@@ -162,5 +161,30 @@ header {
   .nav-container {
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+@media (min-width: 981px) {
+  .navbar {
+    display: flex !important;
+    flex-direction: row;
+  }
+
+  .navbar > li {
+    position: relative;
+  }
+
+  .navbar li ul {
+    display: none;
+    position: absolute;
+    background-color: #004080;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    z-index: 999;
+  }
+
+  .navbar li:hover > ul {
+    display: block;
   }
 }
